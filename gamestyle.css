@@ -14,6 +14,7 @@ button{
 .btn #no{
     position: absolute;
     width: max-content;
+    transition: all 300ms ease;
 }
 #video {
     display: none;
