@@ -13,7 +13,8 @@ button{
 
 .btn #no{
     position: absolute;
-    width: max-content;
+    width: min-content;
+    height: min-content;
     transition: all 300ms ease;
 }
 #video {

@@ -8,11 +8,19 @@
   </head>
   <body>
     <div class="show">
-        <h2>คุณเป็นเกย์ใช่หรือไม่??</h2>
-        <div id="video">
-            <h1>แน่นอน คุณเป็นเกย์ตัวจริง!!!</h1>
-            <iframe width="560" height="315" id="video_content"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
+      <h2>คุณเป็นเกย์ใช่หรือไม่??</h2>
+      <div id="video">
+        <h1>แน่นอน คุณเป็นเกย์ตัวจริง!!!</h1>
+        <iframe
+          width="560"
+          height="315"
+          id="video_content"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
       <div class="btn">
         <button id="yes">ใช่</button>
         <button id="no">ไม่ใช่</button>
@@ -23,19 +31,24 @@
       let no = document.getElementById("no");
       let video = document.getElementById("video");
       let video_content = document.getElementById("video_content");
-        yes.addEventListener('click',()=>{
-          video.style.display = "block";
-          video_content.src ="https://www.youtube.com/embed/FMQY7k39wS0?si=-jN-DYECPAyIDE8Z&autoplay=1";
- 
-        });
-      no.addEventListener("mouseover", () => {
-        let rand = Math.floor(Math.random() * 70);
-        no.style.top = rand + "dvh";
-        no.style.right = rand + "dvw";
-        no.style.left = rand + "dvw";
+      let num = Math.floor(Math.random() * 2);
+      let array_op = ["", "-"];
+      console.log(array_op[num]);
+      yes.addEventListener("click", () => {
+        video.style.display = "block";
+        video_content.src =
+          "https://www.youtube.com/embed/FMQY7k39wS0?si=-jN-DYECPAyIDE8Z&autoplay=1";
       });
+      no.addEventListener("mouseover", () => {
+        let rand = Math.floor(Math.random() * 80) + 1;
+        let rand_horizon = Math.floor(Math.random() * 60) + 1;
+        let maxHeight = 80; // ค่าสูงสุดที่ต้องการให้ไม่เกิน (ใน vh)
 
-    
+        no.style.top = Math.min(rand, maxHeight) + "dvh";
+        no.style.right = Math.min(rand_horizon, maxHeight) + "rem";
+        no.style.left = Math.min(rand_horizon, maxHeight) + "rem";
+        no.style.bottom = Math.min(rand, maxHeight) + "rem";
+      });
     </script>
   </body>
 </html>
