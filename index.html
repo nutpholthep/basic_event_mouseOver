@@ -11,7 +11,7 @@
         <h2>คุณเป็นเกย์ใช่หรือไม่??</h2>
         <div id="video">
             <h1>แน่นอน คุณเป็นเกย์ตัวจริง!!!</h1>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/FMQY7k39wS0?si=-jN-DYECPAyIDE8Z&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" id="video_content"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       <div class="btn">
         <button id="yes">ใช่</button>
@@ -22,9 +22,11 @@
       let yes = document.getElementById("yes");
       let no = document.getElementById("no");
       let v = document.getElementById("video");
+      let vc = document.getElementById("video_content");
         yes.addEventListener('click',()=>{
             v.style.display = "block";
-            
+            vc.src ="https://www.youtube.com/embed/FMQY7k39wS0?si=-jN-DYECPAyIDE8Z&autoplay=1";
+ 
         });
       no.addEventListener("mouseover", () => {
         let rand = Math.floor(Math.random() * 70);
