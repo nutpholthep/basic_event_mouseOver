@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="gamestyle.css" />
+  </head>
+  <body>
+    <div class="show">
+        <h2>คุณเป็นเกย์ใช่หรือไม่??</h2>
+        <div id="video">
+            <h1>แน่นอน คุณเป็นเกย์ตัวจริง!!!</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FMQY7k39wS0?si=-jN-DYECPAyIDE8Z&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      <div class="btn">
+        <button id="yes">ใช่</button>
+        <button id="no">ไม่ใช่</button>
+      </div>
+    </div>
+    <script>
+      let yes = document.getElementById("yes");
+      let no = document.getElementById("no");
+      let v = document.getElementById("video");
+        yes.addEventListener('click',()=>{
+            v.style.display = "block";
+        });
+      no.addEventListener("mouseover", () => {
+        let rand = Math.floor(Math.random() * 70);
+        no.style.top = rand + "dvh";
+        no.style.right = rand + "dvw";
+        no.style.left = rand + "dvw";
+      });
+
+    
+    </script>
+  </body>
+</html>

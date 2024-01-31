@@ -1,0 +1,20 @@
+button{
+    padding: 1.5rem;
+    margin: 1.25rem;
+}
+.show{
+    height: 80dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.btn #no{
+    position: absolute;
+    width: max-content;
+}
+#video {
+    display: none;
+}
