@@ -21,11 +21,11 @@
     <script>
       let yes = document.getElementById("yes");
       let no = document.getElementById("no");
-      let v = document.getElementById("video");
-      let vc = document.getElementById("video_content");
+      let video = document.getElementById("video");
+      let video_content = document.getElementById("video_content");
         yes.addEventListener('click',()=>{
-            v.style.display = "block";
-            vc.src ="https://www.youtube.com/embed/FMQY7k39wS0?si=-jN-DYECPAyIDE8Z&autoplay=1";
+          video.style.display = "block";
+          video_content.src ="https://www.youtube.com/embed/FMQY7k39wS0?si=-jN-DYECPAyIDE8Z&autoplay=1";
  
         });
       no.addEventListener("mouseover", () => {
