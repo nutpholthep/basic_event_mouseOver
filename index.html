@@ -48,7 +48,38 @@
         no.style.right = Math.min(rand_horizon, maxHeight) + "rem";
         no.style.left = Math.min(rand_horizon, maxHeight) + "rem";
         no.style.bottom = Math.min(rand, maxHeight) + "rem";
+        
       });
+      no.addEventListener("click", () => {
+        no.style.display = "none"
+        document.body.innerHTML = '<h1>ยอมจำนนต่อโชคชะตาซะเถอพ่อหนุ่ม</h1>'
+
+        
+      });
+
+
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.shiftKey && e.key === 'J') || (e.ctrlKey && e.key === 'U')) {
+          e.preventDefault();
+        }
+      });
+      function detectDevTools() {
+        const threshold = 140;
+        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+        
+        if (widthThreshold || heightThreshold) {
+          document.body.innerHTML = '<h1>จะโกงหรอพ่อหนุ่ม</h1>';
+          setInterval(detectDevTools(), 100); // Hang the page
+        }
+      }
+    
+      setInterval(detectDevTools, 100);
+    
     </script>
   </body>
 </html>
